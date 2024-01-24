@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+@font-face {
+    font-family: relaway-c;
+    src: url("./fonts/raleway-regular.woff2");
+}
+
+@font-face {
+    font-family: outfit-c;
+    src: url("./fonts/outfit-regular.woff2");
+}
+
+body {
+    background-color: #DEE2E6;
+    color: black;
+    overflow-x: hidden;
+    font-family: relaway-c;
+}
+
+h1, h2, h3 {
+    font-family: outfit-c;
+}
+
+/* will-change  */
+.Hero-Heading, .Hero-Image, .Gallery__Left, .Gallery__Right {
+    will-change: transform;
+}
+
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10vw;
+    gap: 4vh;
+}
+.Hero {
+    align-self: flex-start;
+    height: 90vh;
+    z-index: -1;
+    width: 100%;
+    
+}
+.Hero-Heading {
+    font-size: calc(var(--index) * 8);
+    padding-top: 14vh;
+
+}
+.Hero-Image {
+    position: absolute;
+    right: 8vw;
+    top: 8vh;
+    width: calc(var(--index) * 20) ;
+    z-index: -1;
+
+}
+
+.Gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    /* padding-top: 12vh; */
+    padding-bottom: 22vh;
+}
+
+.Gallery__Left, .Gallery__Right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Gallery__Left {
+    gap: 8vh;
+}
+.Gallery__Right {
+    gap: 5vh;
+}
+
+.Galery__Right-Text {
+    font-size: calc(var(--index) * 4);
+}
+
+.Gallery__Left-Image, .Gallery__Right-Image {
+   border-radius: 8px;
+   
+}
+
+.Gallery__Left-Image {
+    max-width: calc(var(--index) * 22);
+}
+
+.Gallery__Right-Image {
+    max-width: calc(var(--index) * 18);
+}
+
+.Buy {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.Buy_Heading {
+    font-size: calc(var(--index) * 4);
+}
+.Buy_Btn {
+    padding: calc(var(--index) * 0.5);
+    width: max-content;
+    background: none;
+    border: solid 2px black;
+    border-radius: 8px;
+    font-size: calc(var(--index) * 2);
+    align-self: flex-end;
+    cursor: pointer;
+}
